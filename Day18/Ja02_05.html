@@ -29,9 +29,10 @@
         document.write('<br>num1 > 10 || num2 > 10 : '+ res);
         
 
-        res = !(num1==num2);
-        document.write('<br>num1==num2 : '+ res);
-                      
+        res = !(num1==num2); //결과를 뒤집음. false 가 true
+        document.write('<br> ! num1==num2 : '+ res);
+         //만약 !num1==num2와 같이 기술되게 되면 !num1이 먼저 실행되고
+         // 그 결과에 대한 num2와의 ==연산이 실행되면서 의미가 달라진다. 
    </script>
    
    

@@ -12,26 +12,22 @@
 
    
     <script>
-        var num1 = 7;
-        var num2 = 3;
+        var num1 = 7; // 2진수로 0111
+        var num2 = 3; // 2진수로 0011
         var res;
 
-        res = (num1 <10) && (num2 <10);
-        document.write('num1 <10 && num2 <10 : '+ res);
+        res = (num1 & num2); //01 2개의 비트가 모두 1일때만 결과가 1이 되므로 0111 & 0011 
+        document.write('num1 & num2 : '+ res); //0011 = 3 으로 출력
 
-        res = (num1 >10) && (num2 <10);
-        document.write('<br>num1 > 10 && num2 < 10 : '+ res);
+        res = (num1 | num2); //02 2개의 비트 중 하나만 1일 때만 결과가 1이 되므로 0111 | 0011
+        document.write('<br>num1 | num2 : '+ res); //0111 = 7으로 출력
+ 
+        res = ~num1;  //03 1은 0, 0은 1이 되므로 ~0111
+        document.write('<br>~num1 : '+ res); //-1000 은 -8이 출력
 
-        res = (num1 > 10) || (num2 < 10);
-        document.write('<br>num1 > 10 || num2 < 10 : '+ res);
+        res = (num1 ^ num2); //04 대응하는 2개 비트가 서로 다를 떄에만 결과가 1이 되므로 0111 & 0011
+        document.write('<br> !num1 ^ num2 : '+ res); // 0100은 4가 출력
 
-        res = (num1 > 10) || (num2 > 10);
-        document.write('<br>num1 > 10 || num2 > 10 : '+ res);
-        
-
-        res = !(num1==num2);
-        document.write('<br>num1==num2 : '+ res);
-                      
    </script>
    
    
