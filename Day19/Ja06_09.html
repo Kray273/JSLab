@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whoo...</title>
+
+    <script>
+        var now = new Date();
+        var weekday = [];
+        weekday[0] = "일";
+        weekday[1] = "월";
+        weekday[2] = "화";
+        weekday[3] = "수";
+        weekday[4] = "목";
+        weekday[5] = "금";
+        weekday[6] = "토";
+        document.write(now.getFullYear()+"년<br>");
+        document.write(now.getMonth()+"월<br>");
+        document.write(now.getDate()+"일<br>");
+        var wd = now.getDay();
+        document.write(weekday[wd]+"<br>");
+        document.write(now.getHours()+"시<br>");
+        document.write(now.getMinutes()+"분<br>");
+        document.write(now.getSeconds()+"초<br>");
+    </script>
+   
+</head>
+<body>
+
+    <script>
+
+    </script>
+       
+</body>
+</html>
