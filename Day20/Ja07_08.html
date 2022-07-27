@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body onload="count()">
+    <button onclick="first()"> owl</button>
+    <button onclick="secend()"> pcbook</button>
+    <br><br>
+    <iframe src="https://www.typingclub.com/sportal/program-3/352.play" ></iframe>
+    <iframe src="https://www.naver.com/" ></iframe>
+    
+    <script>
+        function count(){
+            var cnt = window.length;
+            alert("프레임 개수: " + cnt);
+        }
+        function first(){
+            window.frames[0].location = "https://www.naver.com/" ;
+        }
+        function secend(){
+            window.frames[1].location = "https://www.naver.com/" ;
+        }
+    </script>
+    
+</body>
+</html>
