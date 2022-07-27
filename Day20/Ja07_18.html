@@ -9,7 +9,7 @@
 <body >
    <h3>버튼을 클릭하면 이전 페이지로 돌아갑니다.</h3>
    <button onclick="goBack()">이전 페이지로</button>
-   <button onclick="assignFunc()">새문서 로드</button>
+   <button onclick="location.href='https://www.naver.com/' ">네이버</button>
 
 
     <script>
@@ -17,8 +17,8 @@
         history.back();
         //history.go(-1);
        }
-       function assignFunc(){
-        location.assign("https://www.naver.com/");
+       function naver(){
+        window.open("https://www.naver.com/");
        }
     </script>
    
