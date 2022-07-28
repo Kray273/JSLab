@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body>
+    <ul id="diviceList"><li>스트마폰</li><li>태블릿</li></ul>
+   <h3>버튼을 클릭하면 아래에 항목이 추됩가니다.</h3>
+   <button onclick="btnFunc()">click click</button>
+
+   <script>
+        function btnFunc(){
+            var newNode = document.createElement("Li");
+            var textNode = document.createTextNode("웨러어블 워치");
+            newNode.appendChild(textNode);
+            var listNode = document.getElementById("diviceList");
+            listNode.insertBefore(newNode,listNode.childNodes[2]);
+        }
+   </script>
+</body>
+</html>

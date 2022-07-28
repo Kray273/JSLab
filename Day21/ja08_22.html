@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body>
+   <h3>버튼을 클릭하면 드롭박스의 부모노드가 표시됩니다.</h3>
+   <select id="selectList" size="4"><option value="">빨간사과</option><option value="">노란 바나나</option><option value="">블루리베</option><option value="">포도청</option></select>
+   <br><br>
+   <button onclick="selectFunc()">click click</button>
+    <p id="here1"></p>
+   <script>
+        function selectFunc(){
+            var x = document.getElementById("selectList").parentNode.nodeName;
+            document.getElementById("here1").innerHTML = x;
+         }
+   </script>
+</body>
+</html>

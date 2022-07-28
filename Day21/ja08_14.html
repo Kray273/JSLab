@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+   <h3>버튼을 클릭하면 새 버튼이 추가됩니다.</h3>
+   <button onclick="btnFunc()">click click</button>
+
+   <script>
+        function btnFunc(){
+            var newNode = document.createElement("button");
+            var textNode = document.createTextNode("New 벗^은");
+            newNode.appendChild(textNode);
+            document.body.appendChild(newNode);
+        }
+   </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body>
+   <h3>버튼을 클릭하면 드롭박스의 크기와 자식노드가 표시됩니다.</h3>
+   <select id="selectList" size="4"><option value="">빨간사과</option><option value="">노란 바나나</option><option value="">블루리베</option><option value="">포도청</option></select>
+   <br><br>
+   <button onclick="selectFunc()">click click</button>
+    <p id="here1"></p>
+    <p id="here2"></p>
+   <script>
+        function selectFunc(){
+            var c = document.getElementById("selectList").childNodes;
+            document.getElementById("here1").innerHTML = c.length;
+            document.getElementById("here2").innerHTML = c[1].text;
+        }
+   </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body>
+    <ul id="diviceList"><li>스트마폰</li><li>태블릿</li><li>웨러어블워치</li></ul>
+   <h3>버튼을 클릭하면 아래에 항목이 삭됩제니다.</h3>
+   <button onclick="btnFunc()">click click</button>
+
+   <script>
+        function btnFunc(){
+            var listNode = document.getElementById("diviceList");
+            listNode.removeChild(listNode.childNodes[0]);
+        }
+   </script>
+</body>
+</html>
