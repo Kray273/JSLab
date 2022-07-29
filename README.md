@@ -1,6 +1,6 @@
 # JSLab
  
-Bigdata lecture
+Bigdata lecture https://www.notion.so/ce0f5d22bf4848baa4ece180773255bd?v=2dec0a18a2874eb38ea88e972b06170e
 
 Day18 https://www.notion.so/Day18-f85a243093544c79b1eb13836726c9a8
 
