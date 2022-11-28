@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산자</title>
+</head>
+<body>
+<script type="text/javascript">
+
+ 	let result1 = 10 / 3; //변수 값 할당 = 값 대입
+ 	document.write("<h6> 10 / 3 : "+ result1 +"</h6>");
+ 	document.write("<h6> window.parseInt 10 / 3 : "+ window.parseInt(result1) + "</h6>");
+ 	let result2 = 10 % 3;
+ 	document.write("<h6> 10 % 3 : "+result2+"</h6>");
+
+ 	let result3 = 10;
+ 	document.write("<h6> 10(1증가) : "+ result3++ +"</h6>"); //반영되지 않음
+ 	document.write("<h6> 10(1증가) : "+ result3 +"</h6>"); //반영됨.
+ 	// 이유는 값을 출력하고 추가한다.
+
+ 	let result4 = 20;
+ 	let result5 = ++result4;
+ 	document.write("<h6> result4(1증가) : "+ result5 +"</h6>");
+ 	
+ 	let a = 10;
+ 	let b = 20;
+ 	document.write("<h6> a : "+ a + ", b = " + b + "</h6>");
+ 	
+ 	var temp = a;
+ 	a = b;
+ 	b = temp;
+ 	document.write("<h6> a와 b의 값 교환 결과 : a ="+ a +", b = "+ b+ "</h6>");
+
+ 	let age = prompt("나이는? ", 20);
+ 	document.write("<h6> age :"+ age + 10 + "</h6>"); // 2010, 문자와 숫자는 연결됨. 
+ 	document.write("<h6> parseInt age :"+ (window.parseInt(age) + 10) + "</h6>"); //형변환 후 가능
+ 	
+ 	var age2 = window.parseInt(age);
+ 	document.write("<h6> parseInt age :"+ typeof(age) + "</h6>"); 
+ 	document.write("<h6> parseInt age2 :"+ typeof(age2) + "</h6>"); 
+
+ 	document.write("<h6> age == 20 ? "+ age == 20 + "</h6>"); //false 
+ 	document.write("<h6> age == 20 ? "+ (age == 20) + "</h6>"); //ture 
+ 	// == 동등연산자는 데이터 타입을 비교하지 않는다. 
+ 	document.write("<h6> age == 20 ? "+ (age === 20) + "</h6>"); //false 
+ 	// ===은 값과 데이터 타입까지 비교한다. 
+ 	
+ 	
+</script>
+</body>
+</html>

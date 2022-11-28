@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS의 변수!</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	//변수 hoisting 한번만 선언되면 어느위치든지! 변수로 설정함.
+	test1 = "test1수정";
+	document.write("<h3>"+ test1+"</h3>");
+
+	//var test1 = "test1최초"; //문자열형
+	var test1 = "test1최초";  
+	document.write("<h3>"+ test1+"</h3>");
+	
+	
+	/*
+	//////////////////////////////////////////
+	test2 = "test2 수정" //출력 안됨 hoisting 허용 X
+	document.write("<h3>"+ test2+"</h3>");
+
+	let test2 = "test2 최초"
+	document.write("<h3>"+ test2+"</h3>");
+	///////////////////////////////////////
+	let test3 = "test3 최초" 
+	document.write("<h3>"+ test3+"</h3>");
+
+	let test3 = "test3 수정" //출력 안됨, 중복된 변수 선언 허용 X
+	document.write("<h3>"+ test3+"</h3>");	
+	//////////////////////////////////////////////
+	*/
+	
+	const test4 = "test4 최초(상수)" 
+	document.write("<h3>"+ test4+"</h3>");
+
+	test4 = "test4 수정" //출력 안됨, 값을 항달되면 변화를 허용 X
+	document.write("<h3>"+ test4+"</h3>");
+	
+</script>
+
+</body>
+</html>

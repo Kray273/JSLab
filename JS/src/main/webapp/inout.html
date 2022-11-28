@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입출력</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var a = 100; //변수선원키워드 변수이름 = 값; <= 변수 선언문
+				// 변수 선언은 메모리 100을 저장하고 a라고 이름을 지어라
+	document.write(a); // a변수 메모리 저장값 출력 
+	console.log(a);
+	alert(a); //가장 먼저 실행, 모달 성격으로 보여진다. 
+	
+	var b = 3.14;
+	document.write("<br>"+"<h3>"+b+"</h3>");
+	
+	//입력
+	var c = '입';
+	var d = '입력';
+	document.write("<br>"+d);
+	
+	var e = true; //논리값형
+	document.write("<br>"+e);
+	
+	e = false;
+	document.write("<br>"+e);
+	
+	e= 10>5;
+	document.write("<br> 10>5 : "+e);
+	
+	var f;
+	document.write("<br> var f = "+f);
+	
+	var array = [1,2,3,4,5];
+	document.write("<br> array[3] = "+ array[3]);
+
+	var array = [];
+	document.write("<br> array[3] = "+ array[3]);
+	
+	var array = new Array(5);
+	document.write("<br> array[3] = "+ array[3]);
+	
+	var f_f = 100;
+	
+	var title = prompt('과정을 입력하세요.'); //String으로 리턴
+	document.write("<br> 과정 : "+ title);
+	
+	var Do = confirm('할꺼야?'); // boolean으로 리턴
+	document.write("<br> 할꺼야? "+ Do);
+	document.write("<br> 할꺼야? "+ typeof(Do));
+	
+	
+	
+</script>
+
+
+
+</body>
+</html>
