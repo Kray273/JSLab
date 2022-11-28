@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건문</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	let age = prompt("나이는? ", 61);
+	/* 코드가 중복되므로 아래 처럼 변환 
+		if ( age >= 20) {
+			let result7 = "성년" // 출력 X, 변수가 if 문 안에서만 사용됨. 
+			document.write("<h6> 성년? 미성년 => "+ result7 + "</h6>"); //같은 if문에서 사용하면 가능
+	} else{
+		let result7 = "미성년"
+			document.write("<h6> 성년? 미성년 => "+ result7 + "</h6>"); //같은 if문에서 사용하면 가능
+	} */
+	
+	let result7;
+		if ( age >= 20) {
+			result7 = "성년" 
+	} else{
+		 result7 = "미성년"
+		}
+		document.write("<h6> 성년? 미성년? => "+ result7 + "</h6>"); 
+		
+	if ( age >= 40) {
+			result7 = "중년"  
+	} else if(age >= 20){
+		result7 = "청년"
+	} else{
+		 result7 = "아동"
+		}
+		document.write("<h6> 뭘까요? => "+ result7 + "</h6>"); 
+		
+	if (age >= 0) {
+		if ( age >= 40 && age <= 60) { //61이상 입력시? 청년 why?? 
+	 		result7 = "중년"  
+		} else if(age >= 20){
+			result7 = "청년"
+		} else{
+			 result7 = "아동"
+	 	}	
+		document.write("<h6> 뭘까요? => "+ result7 + "</h6>"); 
+	} else {
+		document.write("유효하지 않은 값입니다."); 
+	}
+
+</script>
+
+</body>
+</html>

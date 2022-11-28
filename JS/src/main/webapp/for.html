@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>반복문</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	let num = prompt("숫자를 입력해 주세요", 5)
+	document.write("1부터 num까지 출력"+" <br>")
+	for (let i = 1; i <= num; i++) {
+		document.write(i+"<br>");
+	}
+	
+	document.write("1부터 10까지 출력"+" <br>")
+	let sum = 0;
+	for (let i = 1; i <= num; i++) {
+		sum = sum + i;
+		document.write("<p>"+ i +"까지의 합계 = "+ sum + "</p>");
+	}
+	
+	document.write("<p> 최종 합계 = "+ sum + "</p>");
+	
+	
+	//구구단 출력
+	document.write("구구단 출력<br>");
+	document.write("<table style='border: 2px solid blue'>");
+ 	for(let i = 2; i <= 9 ; i++){	
+ 		//if( i == num){continue;} //입력 값 제외
+ 		if( i == num){ break; } //반복제어
+		document.write("<tr>");
+ 		for (let j = 1; j <= 9; j++) {
+			document.write("<td style='border: 2px solid blue'>"+ i +"*"+ j + "= "+ i*j + "</td>");
+		}
+		document.write("</tr>");
+ 	}
+	document.write("</table>");
+	
+</script>
+</body>
+</html>
