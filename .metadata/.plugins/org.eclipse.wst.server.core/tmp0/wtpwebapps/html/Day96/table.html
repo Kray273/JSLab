@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table</title>
+
+<style type="text/css">
+	td {text-align: center;}
+	table {width: 300px; border: 3;}
+</style>
+
+</head>
+<body>
+
+ <!-- 2행 3열  -->
+<table>
+	<tr><td>1행1열</td><td>1행2열</td><td>1행3열</td></tr>
+	<tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+</table>
+
+
+ <!-- 속성추가  -->
+<table border="3" >
+	<caption>표 연습</caption>
+	<!-- <tbody> 자동생성 -->
+	<tr ><th>1행 제목</th><th>2행 제목</th><th>3행 제목</th></tr>
+	<!-- caption, th는 굵은 글씨 내장 -->
+	<tr><td>1행1열</td><td>1행2열</td><td>1행3열</td></tr>
+	<tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+	<!-- </tbody> 자동생성 -->
+</table>
+
+<!-- 테이블 만들기 -->
+<table border="1" style="margin: 1px; padding: 1px; width: 70%;">
+	<caption> 선물용과 가정용 상품구성</caption>
+	<!-- caption은 자동 가운데 정렬 -->
+	<thead>
+	<tr>
+		<th><center>용도</center></th>
+		<!-- 직접할 수도 있지만 css를 이용하는게 효율적 -->
+		<th><center>중량</center></th>
+		<th><center>개수</center></th>
+		<th><center>가격</center></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><center>선물용</center></td>
+		<td><center>선물용</center></td>
+		<td><center>선물용</center></td>
+		<td><center>선물용</center></td>
+	</tr>
+	<tr>
+		<td><center>3kg</center></td>
+		<td><center>5kg</center></td>
+		<td><center>3kg</center></td>
+		<td><center>5kg</center></td>
+	</tr>
+	<tr>
+		<td><center>11~16과</center></td>
+		<td><center>18~26과</center></td>
+		<td><center>11~16과</center></td>
+		<td><center>18~26과</center></td>
+	</tr>
+	<tr>
+		<td><center>35,000원</center></td>
+		<td><center>52,000원</center></td>
+		<td><center>30,000원</center></td>
+		<td><center>47,000원</center></td>
+	</tr>
+	</tbody>
+	<tfoot><tr><td>이것도 있다!</td></tr></tfoot>
+</table>
+
+<hr>
+ <!-- 셀 병합 -->
+<table border="3" style="width: 70%;">
+    <caption>선물용과 가정용 상품 구성</caption>
+    <thead>
+    <tr>
+      <th>용도</th>
+      <th>중량</th>
+      <th>갯수</th>
+      <th>가격</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td rowspan="2">선물용</td>
+      <td>3000kg</td>
+      <td>11~16과</td>
+      <td>35,000원</td>
+    </tr>
+    <tr>
+      <!-- <td>선물용</td> -->
+      <td>5kg</td>
+      <td>18~26과</td>
+      <td>52,000원</td>
+    </tr>
+    <tr>
+      <td rowspan="2">가정용</td>
+      <td>3kg</td>
+      <td>11~16과</td>
+      <td>30,000원</td>
+    </tr>   
+    <tr>
+      <!-- <td>가정용</td> -->
+      <td>5kg</td>
+      <td>18~26과</td>
+      <td>47,000원</td>
+    </tr>   
+    </tbody>
+    <tfoot><tr><td colspan="4">"배송은 내일부터 시작합니다."</td></tr></tfoot>
+  </table>
+  
+ <hr>
+ <!-- 실습 -->
+ <table border="3" >
+ 	<caption> 로그인 표</caption>
+		<tr>
+			<th>아이디 입력</th>
+			<td>sba</td>
+			<td rowspan="2">로그인 버튼</td>
+		</tr>
+		<tr>
+			<th>암호입력</th>
+			<td>sba</td>
+		</tr>
+ </table>
+ 
+ <br>
+ 
+ <table border="3" >
+ 	<caption> 로그인 표</caption>
+		<tr>
+			<th>아이디 입력</th>
+			<td>sba</td>
+		</tr>
+		<tr>
+			<th>암호입력</th>
+			<td>sba</td>
+		</tr>
+		<tr>
+			<td colspan="2">로그인 버튼</td>
+		</tr>
+ </table>
+ 
+ <br>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BoxModel</title>
+<style type="text/css">
+	h1 {
+		color: blue;
+		background-color: green;
+		width: 50%;
+		height: 100px;
+		/* 컨텐츠 가로크기 = width + margin*2 + border굵기*2 */
+		/* 컨텐츠 세로크기 = height + margin*2 + border굵기*2 */
+	 
+		/* 여백지정 */
+		margin: 40px; /* 일괄적용 방법 */
+		/* margin : 10px 20px 30px 40px;  12시에서 시계방향 */
+		/* margin : 40px auto; 40px주고 자동 중앙 정렬 */
+		padding: 50px;
+		
+		/* box style */
+		box-shadow: 10px 10px 5px silver;
+		/*border: 20px solid pink; */
+		border-style: solid;
+		border-width: 20px;
+		border-color: pink;
+		border-radius: 30px;
+		 
+	}
+	
+	img {
+		border : 2px solid pink;
+		background-color: pink; /* img는 안보임 */
+		width: 50%;
+		height: 500px;
+		margin: 40px;
+	}
+
+</style>
+
+</head>
+<body>
+
+<h1> 제목1 </h1>
+<img alt="img" src="/html/img/html5.jpg">
+<img alt="img" src="/html/img/html5.jpg">
+
+</body>
+</html>

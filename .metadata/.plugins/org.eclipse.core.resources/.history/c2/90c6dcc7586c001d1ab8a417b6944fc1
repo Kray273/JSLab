@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTag</title>
+</head>
+<body>
+
+ <!-- type= text/password/hidden 사용자의 입력값을 넘김 -->
+ <!-- type= button(js - 기본 기능X) -->
+ <!-- type= submit/image(기능 내장 form action으로 파일이동), reset(초기화)-->
+ <!-- type= radio(선택을 유도, 단일 선택), checkbox(복수 선택) -->
+
+
+ <!-- 1. 사용자의 입력유도 -> input
+	  2. html 정보 처리 다른 파일 전달 -> form
+  -->
+  
+<form action="http://localhost:8080/html/a.jsp">
+ 아이디 입력 : <input type="text" name="id"><br>
+ 비번 입력 : <input type="password" name="pw"><br>
+ 관리자 모드 : <input type="hidden" value="admin" id="html/css/js" name="jsp"><br>
+ 
+ 성별 : 
+ <input type="radio" value="man" name="gender">남자
+ <input type="radio" value="women" name="gender">여자
+ <br>
+ 
+ 관심과목(복수선택) : 
+ <input type="checkbox" value="java" name="like">자바
+ <input type="checkbox" value="Python" name="like">파이썬
+ <input type="checkbox" value="js" name="like">JS
+ <br>
+ 
+ <input type="submit" value="전송">
+ <!-- 전송 시 url --> 
+ <!--  http://localhost:8080/html/a.jsp?id=id&pw=pw&jsp=admin&gender=women&like=java&like=js&myfile=.gitconfig -->
+ <input type="reset" value="초기화">
+ <input type="button" value="what to do">
+ <input type="image" src="../img/html5.jpg" width="50">
+ <br>
+ 
+ 파일 업로드 : <input type="file" name="myfile">
+</form>
+
+
+</body>
+</html>

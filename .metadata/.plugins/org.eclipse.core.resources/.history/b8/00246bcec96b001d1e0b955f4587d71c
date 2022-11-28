@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>과제1</title>
+</head>
+<body>
+<form action="">
+	<table>
+		<tr>
+			<th colspan="2">상품등록 화면</th>
+		</tr>
+		<tr>			
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

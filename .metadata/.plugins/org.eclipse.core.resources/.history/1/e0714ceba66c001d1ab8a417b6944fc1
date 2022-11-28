@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kray</title>
+<style type="text/css">
+	#line {
+		margin : 20px auto;
+		border: 1px solid black;
+		width: 600px;
+	}
+	
+	h1 {
+	 text-align: center;
+	 color: purple;
+	}
+	
+	table,td {
+		border: 3px solid black; 
+		border-collapse: collapse;
+		margin: auto;
+	}
+	
+</style>
+</head>
+<body>
+
+<div id="line">
+	<h1>상세 게시물 화면</h1>
+	<table>
+		<tr>
+			<td>제목</td>
+			<td>제목1</td>
+		</tr>
+		<tr>
+			<td>작성자</td>
+			<td>작성자1</td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td>내용1</td>
+		</tr>
+		<tr>
+			<td>작성시간</td>
+			<td>2022년도2월4일</td>
+		</tr>
+		<tr>
+			<td>조회수</td>
+			<td>1</td>
+		</tr>
+	</table>
+	
+	<input type="button" value="수정버튼" id="button">
+	<input type="reset" value="삭제버튼" id="button">
+</div>
+
+</div>
+</body>
+</html>

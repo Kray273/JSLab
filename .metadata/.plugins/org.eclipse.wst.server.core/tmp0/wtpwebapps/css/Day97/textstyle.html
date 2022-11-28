@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Text_Style</title>
+
+<style type="text/css">
+
+	/* #target{text-xxx} */
+	#target{
+		/* style */
+		font-family: 감자, sans-serif, monospace;
+		/*감자라는 글씨체가 없음으로 sans-serif적용 */
+		/* monospace는 글 간격을 통일하게 잡는 속성 */
+		font-size: /* 70px */ /* 200%; */ 2em;
+		font-style: italic;
+		font-weight: bold;
+		color: /* red; */ rgba(255,255,0,0.1); 
+		background-color: #8977AD;
+		
+		/* position */
+		text-align: center; /* text 가로 정렬 */
+		width: 700px; /* 크기의 너비 지정 */
+		height: 200px; /* 크기의 높이 지정 */
+		line-height: 200px; /* 한줄의 크기 */
+		
+		/* decoration */
+		text-decoration: overline; 
+		/* text-shadow: x위치 y위치 음영흐리기 색; */
+		text-shadow: 3px 3px 15px red;
+		
+		/* transform */
+		font-variant: small-caps; /* 대문자로 변환 */
+		/*text-transform: uppercase; = 상동 */
+		
+	}
+	
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+	#google {
+		font-family: 'Nanum Pen Script', cursive;
+	}
+	
+	#link { 
+		text-decoration: line-through;
+		text-shadow: -5px -5px 15px green;
+		text-transform: lowercase;
+		}
+	
+	/* 목록 스타일 */	
+	ol{
+		list-style-type: square; 
+	}
+	
+	ul {
+		list-style-type: upper-alpha;
+	}
+	
+	ol, ul{ /* 동일한 수준의 선택자는 덮어써짐. */
+		list-style-type: none;
+		list-style-image: url('google.png');
+		list-style-position: inside;
+	}
+	
+	/* 표스타일 */
+	table,td,th{
+		border: 3px solid green;
+		border-collapse: collapse;
+	}
+	
+	table tbody td {
+		color: aqua;
+		font-size: 2em;
+		text-align: center;
+		line-height: 100%;
+	}
+	
+	
+</style>
+</head>
+<body>
+
+<p>제목 1 웅진 채용 과정 html css javascript</p>
+<h1 id="target"> 제목 1 html css javascript</h1>
+<h1 id="google"> 제목 2 클라우드기반 웹개발 과정</h1>
+<h1><a href="#" id="link">LinK링크동작테스트</a></h1>
+<hr>
+<ol type="A">
+	<li>메일</li>
+	<li>까페</li>
+	<li>뉴스</li>
+</ol>
+
+<ul type="square">
+	<li>메일</li>
+	<li>까페</li>
+	<li>뉴스</li>
+</ul>
+
+<ol>
+	<li>오늘의 월드컵</li>
+	<li>오늘의 뉴스</li>
+	<li>
+		오늘의 코로나현황
+		<ol type="A">
+			<li>지역별 코로나현황</li>
+			<li>누적 코로나현황</li>
+		</ol>
+	</li>
+</ol>
+
+<hr>
+<br>
+<table>
+		<thead>	
+			<tr>
+				<th>용도</th>
+				<th>중량</th>
+				<th>개수</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="2">선물용	</td>
+				<td>3kg</td>
+				<td>11~16과</td>
+				<td>35,000원</td>
+			</tr>
+			<tr>
+				<td>5kg</td>
+				<td>18~26과</td>
+				<td>52,000원</td>
+			</tr>
+			<tr>
+				<td>가정용	</td>
+				<td>3kg</td>
+				<td>11~16과</td>
+				<td>30,000원</td>
+			</tr>
+			<tr>
+				<td>가정용	</td>
+				<td>5kg</td>
+				<td>18~26과</td>
+				<td>47,000원</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">배송은 내일부터 시작됩니다.</td>
+			</tr>
+		</tfoot>			
+	</table>
+
+</body>
+</html>

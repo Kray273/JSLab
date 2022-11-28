@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>과제2</title>
+</head>
+<body>
+
+<h1> 메뉴</h1>
+<ul>
+	<li>아메리카노<br>
+		<img src="../img/americano.jpg" width="50" height="50">
+		에소프레소에 물을 넣어 연하게 마시는 커피
+	</li>
+	<li>카페라떼<br>
+		<img src="cafelatte.jpg" width="50" height="50">
+		에소프레소에 물을 넣어 연하게 마시는 커피
+	</li>
+	<li>카푸치노<br>
+		<img src="cappuccino.jpg" width="50" height="50">
+		에소프레소에 물을 넣어 연하게 마시는 커피
+	</li>
+</ul>
+</body>
+</html>

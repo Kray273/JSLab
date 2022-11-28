@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BoxModel</title>
+<style type="text/css">
+	h1 {
+		color: blue;
+		background-color: green;
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		line-height: 100px;
+	 
+	/* 여백지정 */
+		margin: 10px auto;
+		/* margin : 10px 20px 30px 40px;  12시에서 시계방향 */
+		/* margin : 40px; 일괄적용 방법 */
+	}
+	
+	img {
+		border : 2px solid pink;
+		background-color: pink; /* img는 안보임 */
+		width: 500px;
+		height: 500px;
+	}
+
+</style>
+
+</head>
+<body>
+
+<h1> 제목1 </h1>
+<img alt="img" src="/html/img/html5.jpg">
+
+</body>
+</html>

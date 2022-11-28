@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTag</title>
+</head>
+<body>
+
+ <!-- type= text/password/hidden 사용자의 입력값을 넘김 -->
+ <!-- type= button(js - 기본 기능X) -->
+ <!-- type= submit(기능 내장 form action으로 파일이동) -->
+ <!-- type= radio -->
+ <!-- 1. 사용자의 입력유도 -> input
+	  2. html 정보 처리 다른 파일 전달 -> form
+  -->
+  
+<form action="http://localhost:8080/html/a.jsp">
+ <input type="hidden" value="admin" id="html/css/js" name="jsp"><br>
+ 
+ <input type="radio" value="man" name="gender">남자<br>
+ <input type="radio" value="women" name="gender">여자
+ 
+ 
+ <input type="submit" value="전송">
+ <!-- 전송 시 url -> http://localhost:8080/html/a.jsp?jsp=admin -->
+</form>
+
+
+</body>
+</html>

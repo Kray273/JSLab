@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTag</title>
+</head>
+<body>
+
+ <!-- type 종류 -->
+  <!-- 1. 사용자의 입력유도 
+  	   2. html 정보 처리 다른 파일 전달 
+   -->
+
+<form action="http://localhost:8080/html/a.jsp">
+ <input type="hidden" value="admin" id="html/css/js" name="jsp">
+ <input type="submit">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTag4</title>
+</head>
+<body>
+
+  
+<form action="http://localhost:8080/html/a.jsp">
+ <!-- 아이디 입력 : <input type="text" name="id" value="sba" pattern="[1문자구성규칙]{문자개수}"><br> -->
+ 아이디 입력 : <input type="text" name="id" value="sba" pattern="[A-z가-힣0-9]{5,10}"><br>
+ 아이디 입력 : <input type="text" name="id" value="sba" pattern="[1문자구성규칙]{문자개수}"><br>
+ 이름 입력 : <input type="text" name="name" maxlength="10" size="6" required ><br>
+ 비번 입력 : <input type="password" name="pw" value="sba" readonly><br>
+ 관리자 모드 : <input type="hidden" value="admin" id="html/css/js" name="jsp"><br>
+ 
+ 성별 : 
+ <input type="radio" value="man" name="gender">남자
+ <input type="radio" value="women" name="gender">여자
+ <br>
+ 
+ 관심과목(복수선택) : 
+ <input type="checkbox" value="java" name="like">자바
+ <input type="checkbox" value="Python" name="like">파이썬
+ <input type="checkbox" value="js" name="like">JS
+ <br>
+ 
+ 파일 업로드 : <input type="file" name="myfile"><br>
+ <input type="button" value="what to do"><br>
+ <input type="submit" value="전송">
+ <input type="image" src="../img/html5.jpg" width="50">
+ <input type="reset" value="초기화">
+ <br>
+ 
+</form>
+
+
+</body>
+</html>

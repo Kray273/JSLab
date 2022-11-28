@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTag3</title>
+
+<script type="text/javascript">
+	window.onload = function(){
+		alert(document.getElementById('memoid').value);
+	}
+</script>
+</head>
+<body>
+	<h1>select태그와 textarea태그</h1>
+	<!-- 
+	@ 실제파일 경로 :
+		c:/sba/workspace/프로젝트사용자생성/src/webapp/폴더사용자생성/*.html
+	RUN
+	@ 현재 url :
+		http://localhost:8080/프로젝트사용자생성/*.html
+	@ 자주 수정시 추천 : 
+		/프로젝트사용자생성/*.html
+	 -->
+	<form action="/html/b.jsp">
+		<textarea rows="5" cols="50" name="memo" id="memoid">
+		여기에 메모를 작성하세요.</textarea>
+
+		<select name="ext" multiple>
+			<option value="hwp">한글</option>
+			<option value="doc">워드</option>
+			<option value="txt" selected>메모</option>
+			<option value="html">html</option>
+		</select> <br> <input type="submit" value="가자">
+	</form>
+
+	<a href="#memoid">메모장으로 이동</a>
+</body>
+</html>

@@ -1,0 +1,3 @@
+@charset "UTF-8";
+
+p {border-bottom-color: silver;}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\sba\Workspace\HTML_CSSLab\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1160628860.index
+655364300.index
+50131502.index
+3913244032.index
+3110803780.index
+1746851165.index
+3796886254.index
