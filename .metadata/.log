@@ -9552,3 +9552,9 @@ tern.TernException: Server has been disposed
 	at tern.server.protocol.TernResultsProcessorsFactory.makeRequestAndProcess(TernResultsProcessorsFactory.java:45)
 	at tern.eclipse.ide.internal.core.resources.IDETernServerAsyncReqProcessor.run(IDETernServerAsyncReqProcessor.java:105)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2022-11-28 21:47:38.634
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: tern.eclipse.ide.internal.core.resources.IDETernFileUploader
+
+!ENTRY org.eclipse.core.jobs 2 2 2022-11-28 21:47:38.637
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: tern.eclipse.ide.internal.core.resources.IDETernServerAsyncReqProcessor
