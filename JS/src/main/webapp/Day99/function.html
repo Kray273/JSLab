@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	/*
+	function a(매개변수){ 
+		특정 기능 수행 문장 모음 정의!!
+	}  a함수 end
+	*/
+	
+	function f1(){
+		document.write("<h6>f1함수 실행</h6>")
+	} 
+	
+	function area(radius) {
+		//let radius =  5; 매개변수로 인해 필요없음
+		document.write("<h6>area함수 실행 - 반지름이 " + radius + "인 원의 면적 = "+ radius*radius*3.14 +"</h6>");
+	}
+	
+	function area2(radius) {
+		if(typeof radius == 'number'){
+			document.write("<h6>area함수 실행 - 반지름이 " + radius + "인 원의 면적 = "+ radius*radius*3.14 +"</h6>");		
+		} else {
+			document.write("<h6>NaN임으로 계산 불가</h6>");					
+		}
+	}
+	
+	let name2 = "전역변수";
+	function area3(radius) {
+		let name = "원"; // 함수 지역변수
+		if(typeof radius == 'number'){
+			document.write("<h6>area함수 실행 - 반지름이 " + radius + "인 원의 면적 = "+ radius*radius*3.14 +"</h6>");		
+		} else {
+			document.write("<h6>NaN임으로 계산 불가</h6>");					
+		}
+	}
+	
+	function rect(w, h){
+		document.write("<h6>가로 = " + w + ", 세로 = "+ h + "인 사각형의 면적 = "+ (w * h)  +"</h6>");							
+	}
+	
+	function isThree(su){
+		if(su % 3 == 0){		
+			return "3의 배수";							
+		} else {
+			return "3의 배수 아님";										
+		}
+	}
+	
+	document.write("<h6>전역실행</h6>");
+
+	f1(); //호출된 위치에서 실행.
+	f1();
+
+	area(5);
+	area(15);
+	area("a");
+	area2("a");
+	
+	document.write("<h6>"+ name +"</h6>") // 지역변수여서 실행 안됨. 
+	document.write("<h6>"+ name2 +"</h6>")
+	
+	rect(6,8);
+	rect(6); //NaN으로 결과값을 보여줌. 
+	rect(6,8,10); // 3번째 매개변수는 버림.
+	
+	let result1 = isThree(30);
+	let result2 = isThree(31);
+	document.write("<h6>30 : " + result1 + "</h6>");
+	document.write("<h6>31 : " + result2 + "</h6>");
+	
+	
+	
+</script>
+</body>
+</html>
