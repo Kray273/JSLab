@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수4_=>함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	var h = "<h6>"
+	var h_ = "</h6>"
+	
+	//화살표 함수 : 함수를 더욱 갈결하게 실시
+	// function (a){return a*a;}
+	let f1 = (a)=>{return a*a;} //1. 변수처럼 사용
+	// a => a*a
+	document.write(h + f1(10) + h_); 
+	document.write(h + (a => a*a)(5) + h_); // 2. 정의 즉각 사용
+	
+	//setTimeout(function(){alert('출력');}, 1000); 
+	// 1초 뒤 첫 번째 매개변수인 함수 실행.
+	setTimeout( ()=>{alert('출력');}, 1000);
+	setInterval( ()=>{alert('출력 반복');}, 2000); // 2초 간격으로 반복 실행
+	
+	/* 
+	1. 함수정의형태
+		function f1(){}
+		let f2 = function() {}
+		let f3 = () =>{}
+	2. 함수실행형태
+		2-1. f1(); 호출 수동 실행
+		2-2 시간 타이머 자동 실행
+		2-3 <input type='button' onclick='f1()'>
+	*/
+	
+	
+	
+</script>
+</body>
+</html>

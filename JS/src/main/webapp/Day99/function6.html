@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수6_이벤트 처리 </title>
+<style type="text/css">
+	#clock {
+		background-color: aqua;
+		margin: 20px auto;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var h = new Array("<h6>", "</h6>");
+	
+	var timer = setInterval(() =>{
+		document.getElementById("clock").innerHTML = h[0] + new Date().toLocaleTimeString() + h[1];	
+	}, 1000);//1초마다 표시
+	
+	setTimeout(() =>{clearInterval(timer);} ,10000); //5초 뒤에 정지
+	
+	// onload는 문서 로딩이 종료(/html)되고 이벤트 발생.
+	onload = () => {alert(document.getElementById("clock").innerHTML);}
+</script>
+
+<div id="clock">여기에 시간을 표시할 예정입니다.</div>
+
+</body>
+</html>

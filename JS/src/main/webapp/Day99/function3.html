@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수3_함수와 변수의 위치</title>
+</head>
+<body>
+<script type="text/javascript">
+	var h = "<h6>"
+	var h_ = "</h6>"
+
+	name = "전역변수";
+	
+	function f1() {
+		var name = '지역변수';
+		document.write(h + name + h_);
+	}
+	
+	function f2() {
+		var name = '지역변수';
+		document.write(h + this.name + h_);
+	}
+	
+	//var name2; hoisting
+	//document.write(h + name2 + h_); // error name2가 지정되지 않음 hoisting하면 가능
+	
+	function f3() {
+		var name = '지역변수';
+		name2 = "변수" // var 가 붙지 않아서 전역벽수로 사용
+		document.write(h + name + " : " + name2 + h_);
+	}
+	
+	document.write(h + name + h_);
+	f1(); // name이 지역변수로 덮어 써짐.
+	f2(); // this를 통해 전역변수를 호출
+	f3();
+	document.write(h + name2 + h_);
+	
+	
+</script>
+</body>
+</html>

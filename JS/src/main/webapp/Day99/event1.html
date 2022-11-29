@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script type="text/javascript">
+	onload = function() {
+		document.getElementById('btn1').onclick = function(){
+			alert(document.getElementById('btn1').value);
+			document.getElementById('btn1').value =  '버튼 아님';
+			document.getElementById('btn1').style =  'background-color : green;';
+		}
+	}
+</script>
+
+</head>
+<body>
+	<input id="btn1" type="button" value="버튼1">
+	<input id="btn2" type="button" value="버튼2">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수5_시간 이벤트 </title>
+<style type="text/css">
+	#clock {
+		background-color: aqua;
+		margin: 20px auto;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var h = new Array("<h6>", "</h6>");
+	
+	/*
+	function f1() {
+		document.write(h[0] + new Date().toLocaleDateString() + "3초" + h[1]);
+	}
+	
+	setTimeout(f1, 3000); // f1() 작동안됨. 함수명만 들어가야함.
+	setTimeout(() =>{
+		document.write(h[0] + new Date().toLocaleDateString() + "2초" + h[1]);
+	}, 2000);
+	*/
+	
+	var timer = setInterval(() =>{
+		// id onclock 태그 조회
+		document.getElementById("clock").innerHTML = h[0] + new Date().toLocaleTimeString() + h[1];	
+	}, 1000);//1초마다 표시
+	
+	setTimeout(() =>{clearInterval(timer);} ,10000); //10초 뒤에 정지
+	
+
+</script>
+<div id="clock">
+
+</div>
+</body>
+</html>
