@@ -31,9 +31,11 @@
 	 		
 	 		// DOM구조 : document.getElementById('result').innerHTML += this.style.color+"br";
 			//$('#result').html( $('#result').html() + this.style.color+"<br>");
+			$('#result').html( $('#result').html() + $(this).css("color")+"<br>"); //getter사용
+		
 			//html()안에 setter/getter를 동시에 사용함! 
 			 //$('#result').append(this.style.color+"<br>"); // 더 간편하게 사용.
-			 $('#result').text(this.style.color+"<br>"); //<br>을 문자로 해석
+			 //$('#result').text(this.style.color+"<br>"); //<br>을 문자로 해석
 		 });
 	});
 	

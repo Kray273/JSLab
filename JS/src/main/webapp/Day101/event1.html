@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script src="../jquery/jquery-3.6.1.min.js"></script>
+<script>
+	$(document).ready(()=>{
+		//btnclick 클릭시 횟수 메시지 
+		var clickcount = 0; //초기화
+		$("#btnclick").on("click",()=>{
+			clickcount++;
+			$("#clickout").html(clickcount + "번 클릭하셨습니다.");	
+		}); //on-click
+				
+		//btnstop 클릭시 clickcount 중단
+		$("#btnstop").on("click",() =>{
+			$("#btnclick").off("click"); //off 중단 함수 
+		});//on-click
+		
+		//공지사항을 출력
+		$("#btnnotice").one("click",() =>{ //one은 한번만 실행
+			$("#clickout").html("공지사항입니다. 1번만 출력합니다.");				
+		});//one-click
+		
+		$('#keyin').on('keypress',(event)=>{
+			//1. 키 입력내용 출력
+			//$('#keyout').html( $("#keyin").val() );
+			
+			//2. 0-9 숫자 출력
+			/* if( 48 <= event.keyCode && event.keyCode <= 57){
+				$('#keyout').html(event.keyCode - 48);				
+				$('#keyout').css('background-color','green');				
+			} else{
+				$('#keyout').html('부적합');								
+				$('#keyout').css('background-color','gray');				
+			} */
+			
+			//3. 폰번호 010시작, 국번 3,4자리 전화번호 4자리
+			var regex = /^010-[0-9]{3,4}-[0-9]{4}$/;
+			var keyin = $("#keyin").val(); //val()는 return 문자열
+			if(keyin.match(regex) != null ){ 
+				//match는 문자열의 내장함수로 비교 후 일치 시 입력값 리턴, 아니면 null 
+				$('#keyout').html(keyin.match(regex));												
+				$('#keyout').css('background-color','green');				
+			} else{
+				$('#keyout').html( $("#keyin").val() );
+				$('#keyout').css('background-color','gray');				
+			} 
+			
+		
+		});//on - press
+	
+	
+	});//ready
+</script>
+
+</head>
+<body>
+<input type="button" value="클릭버튼" id="btnclick">
+<input type="button" value="클릭중단" id="btnstop">
+<input type="button" value="공지사항보기" id="btnnotice">
+<div id="clickout"></div>
+<input type="text" id="keyin">
+<div id="keyout"></div>
+
+</body>
+</html>

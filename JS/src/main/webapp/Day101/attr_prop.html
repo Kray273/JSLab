@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQ_Attr_prop</title>
+<script src="../jquery/jquery-3.6.1.min.js"></script>
+<script>
+	$(document).ready(()=>{
+		/* 
+		$("#help1").html( $("#link1").html() + "하면 "
+				+ $("#link1").attr("href") + "입니다."); //html
+		$("#help2").html( $("#link1").html() + "하면 "
+				+ $("#link1").prop("href") + "입니다."); //html
+		*/
+		
+		setInterval(()=>{
+			if( $("#a").prop("checked") == true ){
+				$("#a").prop("checked", false);
+			} else{
+				$("#a").prop("checked", true);				
+			}
+			$('#help1').html("--"+ $('#a').attr("checked")+"--");
+			$('#help2').html("--"+ $('#a').prop("checked")+"--");
+		},1000);//set
+		
+		
+	});//ready
+</script>
+
+</head>
+<body>
+
+<a href="../Day100/selector.html" id="link1">선택자 예제 파일로 이동</a><br>
+<input type="checkbox" id="a" value="새싹" >새싹아카데미
+<input type="checkbox" id="b" value="꽃잎">꽃앞아카데미
+<input type="checkbox" id="c" value="열매">열매아카데미
+<input type="checkbox" id="d" value="나무">나무아카데미
+<div id="help1"></div>
+<div id="help2"></div>
+</body>
+</html>
