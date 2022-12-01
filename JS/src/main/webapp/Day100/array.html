@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = []; // 빈배열 생성
+	var b = [1,2,3];
+	var c = ['java', true, [1,2,3], 3.14]; // JS는 배열을 데이터프레임의 형태로 구성
+	var a2 = new Array(1); // 생성자를 활용 길이가 1개인 배열을 생성
+	
+	var g = [];
+	document.write("<h6>"+ g.length +"</h6>")
+	g[0] = 10;
+	g[1] = 20;
+	g[2] = 30;
+	g[0] = 0; // 덮어써짐.
+	g[4] = 40; // 원하는 index위치에 추가 가능
+	document.write("<h6>"+ g.length +"</h6>"); //array는 동적 인덱스의 길이를 가짐.
+	
+	document.write("<h6>"+ " length반복 출력 " +"</h6>");
+	for(var i = 0; i < g.length; i++){
+		document.write("<h6>"+ i + "번째의 값 : " + g[i] +"</h6>");
+	}
+	
+	document.write("<h6>"+ " index반복 출력 " +"</h6>");
+	for(index in g){ //값을 지정한 index만 출력
+		document.write("<h6>"+ index + "번째의 값 : " + g[index] +"</h6>");
+	}
+
+	document.write("<h6>"+ " join()반복 출력 " +"</h6>");
+	document.write("<h6>"+ g.join('<br>') +"</h6>"); //빈 index출력
+	
+	document.write("<h6> forEach() 반복 출력 EC6이상에서 지원</h6>");
+	g.forEach(function(data){ // 값을 지정한 index만 출력
+		document.write("<h6>"+ data +"</h6>");
+	});
+	
+	var b = [1, 2, 3];
+	b.push(4); //배열 끝 자동 추가
+	b.unshift(7); //배열의 처음에 추가
+	document.write("<h6>"+ b.join(' : ') +"</h6>");
+	b.pop(); //배열의 끝을 삭제
+	b.shift(); //배열의 첫번째 삭제
+	document.write("<h6>"+ b.join(' : ') +"</h6>");
+	document.write("<h6>"+ typeof b +"</h6>"); //array가 아닌 object로 출력
+	document.write("<h6>"+ (b instanceof Array) +"</h6>"); //array인 객체이니? 
+	document.write("<h6>"+ (b.constructor == Array) +"</h6>"); // array이 생성자니?
+
+</script>
+</body>
+</html>

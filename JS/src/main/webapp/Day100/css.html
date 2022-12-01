@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 CSS</title>
+<script src="../jquery/jquery-3.6.1.min.js"></script> 
+<style type="text/css"> 
+ /* 없음 */
+</style>
+
+<script>
+	/* $(document).ready(function(){
+		$("h1:frist").css("color", "red"); //setter
+		$("h1:last").css("color", "blue");
+		$("h1:eq(1)").css("color", "green");
+	}); */
+	
+	$(document).ready(function(){
+		var cols = ['red','orange','yellow','green','blue','navy','purple']
+		$('h1').css("color",function(i){
+			//7가시 색 반복 적용!
+			return cols[i];
+		});
+		
+		//h1글씨 색상정보 다르면 모두 alert
+		//alert($("h1").css("color")); //getter. 1개만 출력
+		 $("h1").each(function(){//반복
+			 
+			//alert( $(this).css("color") );
+	 		//console.log($(this).css("color"));
+	 		
+	 		// DOM구조 : document.getElementById('result').innerHTML += this.style.color+"br";
+			//$('#result').html( $('#result').html() + this.style.color+"<br>");
+			//html()안에 setter/getter를 동시에 사용함! 
+			 //$('#result').append(this.style.color+"<br>"); // 더 간편하게 사용.
+			 $('#result').text(this.style.color+"<br>"); //<br>을 문자로 해석
+		 });
+	});
+	
+	// jQuery 패턴
+	//1. $().함수('');
+	//2. $().함수(function(){});
+	
+	
+	
+</script>
+
+</head>
+<body>
+	<h1>제목1</h1>
+	<h1>제목2</h1>
+	<h1>제목3</h1>
+	<h1>제목4</h1>
+	<h1>제목5</h1>
+	<h1>제목6</h1>
+	<h1>제목7</h1>
+	<div id="result"></div>
+</body>
+</html>

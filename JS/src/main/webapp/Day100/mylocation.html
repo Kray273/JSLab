@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네비게이터-위치</title>
+</head>
+<body>
+<input type="button" value="위치추적시작" id="start">
+<input type="button" value="위치추적종료" id="stop">
+<div ><h5 id="result">시작해주세요.</h5></div>
+<script>
+	document.querySelector('#start').onclick = function(){
+		//위치추적 시작버튼 클릭 시 위치정보 알아보기
+		watchid = navigator.geolocation.watchPosition(success, fail); //자료형을 없애서 전역변수처럼 선언해야 종료시 사용 가능
+		document.querySelector('#result').innerHTML = "위치 추적을 시작합니다.";
+	}
+	
+	document.querySelector('#stop').onclick = function(){
+		//위치추적 종료버튼 클릭 시 위치정보 중단
+		navigator.geolocation.clearWatch(watchid);
+		document.querySelector('#result').innerHTML = "위치 추적을 종료합니다.";
+	}
+	
+	function success(me){
+		var lat = me.coords.latitude;
+		var lon = me.coords.longitude;
+		var al = me.coords.altitude; // 고도 정보가 없을 시 null
+		document.querySelector('#result').innerHTML = "나의 위도 : " + lat + ", 나의 경도 : " + lon + ", 나의 고도 : " + al ;
+		window.open("http://maps.google.com?q="+ lat+","+lon , "구글 위치 표시", "width=800, height=600, resizable=yes");
+		
+	}
+	function fail(error){
+		document.querySelector('#result').innerHTML = "오류발생." + error.code + "번 : "+ error.message;		
+	}
+	
+</script>
+</body>
+</html>

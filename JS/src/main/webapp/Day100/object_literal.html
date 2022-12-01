@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 그 자체의 변하지 않는 데이터</title>
+</head>
+<body>
+<script type="text/javascript">
+	var h = new Array("<h6>", "</h6>");
+	
+	// 객체(=변수 일종) = 매서드(함수) + 프로퍼티(변수)
+
+	var emp1 = { 
+		id : 100, //변수 자료형 선언X!! 변수 이름만 작성
+		name : 'Kray', 
+		salary : 45000.00 , 
+		calcSalary : function(bonus) { //함수
+			//salary = salary + bonus; salary룰 새로운 변수로 인지한다.
+			this.salary = this.salary + bonus; //this로 변수의 위치를 잡아준다.
+			return this.salary;	
+		}
+	};
+
+	document.write(h[0] + emp1.name + h[1])
+	document.write(h[0] + "보너스 전 급여 : " + emp1.salary + h[1])
+	document.write(h[0] + "보너스 후 급여 : " + emp1.calcSalary(5000) + h[1])
+	
+</script>
+</body>
+</html>

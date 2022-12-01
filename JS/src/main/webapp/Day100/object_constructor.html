@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 생성자</title>
+</head>
+<body>
+<script type="text/javascript">
+	var h = new Array("<h6>", "</h6>");
+	
+	function Emp(id, name, salary){ //생성자(객체) 생성, 메모리복사본 호출 함수
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.calcSalary = function(bonus){
+			this.salary = this.salary + bonus;
+			return this.salary; 
+		},
+		this.print = function(){
+			document.write(h[0] + "사원의 이름은 " + this.name + "이고 사번은 " + this.id
+					+ "이며, 급여는 " + this.salary + "입니다." + h[1])
+		}
+		/* emp2만 가지는 기능으로 구현
+		this.study = function(){
+			document.write('석박사 학위 과정 공부합니다.');
+		} 
+		*/
+	}
+	
+	var emp1 = new Emp(010, 'Kray', 45000.00); //객체로 사용 즉, 메모리에 복사됨.
+	var emp2 = new Emp(101, 'Gray', 55000.00);
+	
+	emp1.print()
+	emp2.print()
+	
+	emp1.calcSalary(5000)
+	emp2.calcSalary(-5000)
+	
+	emp1.print()
+	emp2.print()
+	
+	//특정 객체만 기능을 추가할 때! 
+	emp2.study = function(){
+		document.write('석박사 학위 과정 공부합니다.');
+	}
+	emp2.study();
+	
+	
+	
+</script>
+</body>
+</html>

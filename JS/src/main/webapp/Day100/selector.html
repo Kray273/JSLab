@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 고급 선택자</title>
+<script src="../jquery/jquery-3.6.1.min.js"></script> 
+<script>
+	$(document).ready(function(){
+	/*
+		$("#second").css("color", 'red');//id second 태그 선택하여 글씨색 빨강
+		$('.red').css("color",'pink');
+		$('h1').css("color",'yellow'); //a태그가 더 가깝기에 링크1은 적용X
+		$('h1 a').css("color",'green'); //h1포함 자식, 자식의 자식
+		$('h1 > a').css("color",'green'); // h1 포함 자식만!
+		$('h1, td').css("color",'gray'); // h1 포함 자식만!
+		$('h1#second').css("color",'gray'); //두가지 조건 만족(공백이 있음 다른 포함관계)
+		$('h1.red').css("color",'green'); 
+		$('input[type=text]').css("color",'red');
+		$('input:text').css("color",'red');
+		$('input:button').css("color",'green');
+		$('input[type=button], button').css("color",'red');
+		$('input[type*=e]').css("color",'red'); //*=는 e문자를 포함하는 것이라는 뜻
+		$('input[type^=e]').css("color",'red'); //^=는 e로 시작되는 문자!
+		$('input[type$=el]').css("color",'red'); //$=는 e로 종료되는 문자!
+		$('input:checkbox').css("color",'red'); 
+		//바뀌지 않음. 이유는 그 뒤에 글씨는 인풋 태그가 아니다. 
+		$('input:checked').parent().css("color",'red'); 
+		// parent()를 이용해 부모인 태그로 선택 가능
+		$('th').css("color",'red'); 
+		$('table > th').css("color",'yellow'); //부등호를 넣으면 적용X 중간에 tr이 있다.
+		$('table th').css("color",'yellow'); //테이블의 포함관계를 적용!
+		$('table th').css("color",'yellow'); //테이블의 포함관계를 적용!
+		$('th:first').css("color",'yellow'); //첫번째만 선택할 수 있음
+		$('th:last').css("color",'orange'); //마지막만 선택할 수 있음 but 전체table이 고려
+		$('th:first-child').css("color",'yellow'); //테이블의 첫번째마다 선택됨! 누군가의 자식이여야함.
+		$('th:last-child').css("color",'orange'); //위와 상동
+		$('tr:eq(4) td').css("color",'orange'); //eq(?) ?위치로 선택
+		$('tr:gt(5) td').css("color",'blue'); //gt(?) ?보다 큰!
+		$('tr:lt(3) td').css("color",'green'); //lt(?) ?보다 작은!
+		$('tr:nth-child(2n) td').css("color",'green'); //nth-child(?n) ?의 배수를 선택
+		$('tr:nth-child(2n+1) td').css("color",'red'); //nth-child(?n+1) ?+1의 배수를 선택
+		$('table >tbody>tr> td').css("color",'red'); // 복잡하니 쓰지 테이블에 부등호는 비추
+	*/
+		$('select option:selected').css("color",'red'); 
+		
+	
+	});
+</script>
+</head>
+<body>
+	<h1 class="red">제목1</h1>
+	<h1 id="second">제목2</h1>
+	<h1><a href="#">링크1</a></h1>
+	<a class="red" href="#">링크2</a><br>
+	<input type="text" value="기본문자열"><br>
+	<input type="password" value="기본암호"><br>
+	<input type="tel" value="기본"><br>
+	<input type="url" value="http://"><br>
+	<input type="email" value="a@b.com"><br>
+	<input type="button" value="버튼1"><br>
+	<button>버튼2</button><br>
+	<label for="title"><input type="checkbox" value="sql" id="title" checked>sql</label>
+	<input type="checkbox" value="java" >java
+	<input type="checkbox" value="spring">spring
+	<input type="checkbox" value="maria">DB<br>
+	<select>
+		<option>1</option>
+		<option selected>2</option>
+		<option>3</option>
+		<option>4</option>
+	</select>
+	<table>
+		<tr><th>번호</th><th>제목</th><th>내용</th><th>작성자</th></tr>
+		<tr><td>1</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+		<tr><td>2</td><td>제목2</td><td>내용2</td><td>진웅</td></tr>
+		<tr><td>3</td><td>제목3</td><td>내용3</td><td>웅닞</td></tr>
+		<tr><td>4</td><td>제목4</td><td>내용4</td><td>닞웅</td></tr>
+		<tr><td>5</td><td>제목1</td><td>내용1</td><td>옹진</td></tr>
+		<tr><td>6</td><td>제목1</td><td>내용1</td><td>진옹</td></tr>
+		<tr><td>7</td><td>제목7</td><td>내용7</td><td>옹닞</td></tr>
+	</table>
+	<table>
+		<tr><th>번호</th><th>제목</th><th>내용</th><th>작성자</th></tr>
+		<tr><td>1</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+		<tr><td>2</td><td>제목2</td><td>내용2</td><td>진웅</td></tr>
+		<tr><td>3</td><td>제목3</td><td>내용3</td><td>웅닞</td></tr>
+		<tr><td>4</td><td>제목4</td><td>내용4</td><td>닞웅</td></tr>
+		<tr><td>5</td><td>제목1</td><td>내용1</td><td>옹진</td></tr>
+		<tr><td>6</td><td>제목1</td><td>내용1</td><td>진옹</td></tr>
+		<tr><td>7</td><td>제목7</td><td>내용7</td><td>옹닞</td></tr>
+	</table>
+
+</body>
+</html>
