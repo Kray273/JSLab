@@ -12,6 +12,8 @@ Day21 https://www.notion.so/Day21-937abd423d6441249658322d9cc50be5
 
 Day98 https://www.notion.so/Day-S-98_-13de6ef9ed4c4f35accc19c2698e1f4e
 
-Day99
+Day99 https://www.notion.so/Day-S-99_JS-3b3132d6da584da5810736efa75a5a2d
 
-Day100
+Day100 https://www.notion.so/Day-S-100_JS-Object-Array-_JQuery-912ee6250bf7441680390681abdcd6ae
+
+Day101 https://www.notion.so/Day-S-101_JQuery-5ad5a208e63b429bad0159b6868a3769
