@@ -4848,3 +4848,23 @@ tern.TernException: Server has been disposed
 	at tern.server.protocol.TernResultsProcessorsFactory.makeRequestAndProcess(TernResultsProcessorsFactory.java:45)
 	at tern.eclipse.ide.internal.core.resources.IDETernServerAsyncReqProcessor.run(IDETernServerAsyncReqProcessor.java:105)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY tern.eclipse.ide.core 4 0 2022-12-02 10:44:05.143
+!MESSAGE Server has been disposed
+!STACK 0
+tern.TernException: Server has been disposed
+	at tern.server.nodejs.NodejsTernServer.makeRequest(NodejsTernServer.java:216)
+	at tern.server.nodejs.NodejsTernServer.request(NodejsTernServer.java:204)
+	at tern.server.protocol.TernResultsProcessorsFactory.makeRequestAndProcess(TernResultsProcessorsFactory.java:45)
+	at tern.eclipse.ide.internal.core.resources.IDETernServerAsyncReqProcessor.run(IDETernServerAsyncReqProcessor.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY tern.eclipse.ide.core 4 0 2022-12-02 11:14:02.935
+!MESSAGE Server has been disposed
+!STACK 0
+tern.TernException: Server has been disposed
+	at tern.server.nodejs.NodejsTernServer.makeRequest(NodejsTernServer.java:216)
+	at tern.server.nodejs.NodejsTernServer.request(NodejsTernServer.java:204)
+	at tern.server.protocol.TernResultsProcessorsFactory.makeRequestAndProcess(TernResultsProcessorsFactory.java:45)
+	at tern.eclipse.ide.internal.core.resources.IDETernServerAsyncReqProcessor.run(IDETernServerAsyncReqProcessor.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -11,18 +11,20 @@
 			//모두 선택
 			if($(this).attr("checked") == undefined ){
 				$('input[type=checkbox]').attr("checked","checked");
+				$('input:checkbox').prop("checked",true)
 			} 
 			else {
 				$('input[type=checkbox]').removeAttr("checked");				
 			} 
 			
 				//모두 해제
-			//if($(this).prop("checked") != true){
-			//	$('input[type=checkbox]').removeAttr("checked");				
-			//} 
-			//else {
-			//	$('input[type=checkbox]').attr("checked","checked");
-			//} 
+			if($(this).prop("checked") != true){
+				$('input[type=checkbox]').removeAttr("checked");
+				$('input:checkbox').prop("checked",false)
+			} 
+			else {
+				$('input[type=checkbox]').attr("checked","checked");
+			} 
 				
 		})//on
 		
